@@ -1,4 +1,4 @@
-# cloud-center
+# cloud-center v2
 边缘平台的数据云中心
 云控制中心主要实现三个功能：
 
