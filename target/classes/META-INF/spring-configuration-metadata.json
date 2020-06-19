@@ -1,0 +1,27 @@
+{
+  "groups": [
+    {
+      "name": "data",
+      "type": "com.intelligence.edge.config.CarConfig",
+      "sourceType": "com.intelligence.edge.config.CarConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "data.car-e-n-v-port",
+      "type": "java.util.Map<java.lang.String,java.lang.Integer>",
+      "sourceType": "com.intelligence.edge.config.CarConfig"
+    },
+    {
+      "name": "data.car-video-port",
+      "type": "java.util.Map<java.lang.String,java.lang.Integer>",
+      "sourceType": "com.intelligence.edge.config.CarConfig"
+    },
+    {
+      "name": "data.connect-flag",
+      "type": "java.util.Map<java.lang.String,java.lang.Boolean>",
+      "sourceType": "com.intelligence.edge.config.CarConfig"
+    }
+  ],
+  "hints": []
+}

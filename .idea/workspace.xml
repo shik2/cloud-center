@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2457d831-492e-42be-859f-b5c74cdf7396" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/intelligence/edge/server/CarVideoServer.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/intelligence/edge/server/CarENVServer.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/intelligence/edge/service/impl/CarBasicDataServiceImpl.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/intelligence/edge/controller/CarNetController.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/intelligence/edge/dao/CarBasicDataMapper.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/intelligence/edge/service/impl/CarNetServiceImpl.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/intelligence/edge/service/CarBasicDataService.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\Maven\repository" />
+        <option name="mavenHome" value="D:/Maven/apache-maven-3.6.0" />
+        <option name="userSettingsFile" value="D:\Maven\apache-maven-3.6.0\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1dNtZlLov6NjgpZ9CvyLQYrsO3x" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/mapper" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.intelligence.edge.service.impl" />
+      <recent name="com.intelligence.edge.pojo" />
+      <recent name="com.intelligence.edge.service" />
+      <recent name="com.intelligence.edge" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\边缘云中心\cloud-center\src\main\resources\mapper" />
+      <recent name="F:\边缘云中心\cloud-center\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.Starter">
+    <configuration name="UDPClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="UDPClient" />
+      <module name="cloud-center" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UDPVideoClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="UDPVideoClient" />
+      <module name="cloud-center" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BasicControllerTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cloud-center" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BasicControllerTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SQLTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cloud-center" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SQLTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Starter" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="cloud-center" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.intelligence.edge.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.intelligence.edge.Starter" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.Starter" />
+        <item itemvalue="JUnit.SQLTest.test" />
+        <item itemvalue="Application.UDPClient" />
+        <item itemvalue="JUnit.BasicControllerTest.test" />
+        <item itemvalue="Application.UDPVideoClient" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpringBootOptions">
+    <option name="showAdditionalConfigNotification" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2457d831-492e-42be-859f-b5c74cdf7396" name="Default Changelist" comment="" />
+      <created>1592277435950</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1592277435950</updated>
+      <workItem from="1592277437382" duration="50107000" />
+      <workItem from="1592445273828" duration="11386000" />
+      <workItem from="1592551958191" duration="3206000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="452" y="96" key="#Inspections" timestamp="1592394568869">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="452" y="96" key="#Inspections/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1592394568869" />
+    <state x="283" y="7" key="#Project_Structure" timestamp="1592363060724">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1228" y="180" key="#Project_Structure/0.0.1920.1040/-1440.174.1440.860@-1440.174.1440.860" timestamp="1592288617574" />
+    <state x="283" y="7" key="#Project_Structure/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1592363060724" />
+    <state x="-1018" y="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1592277622006">
+      <screen x="-1440" y="174" width="1440" height="860" />
+    </state>
+    <state x="-1018" y="390" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/-1440.174.1440.860@-1440.174.1440.860" timestamp="1592277622006" />
+    <state x="721" y="162" key="#com.intellij.ide.util.MemberChooser" timestamp="1592546555842">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="721" y="162" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1592546555842" />
+    <state x="708" y="354" width="503" height="343" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1592375791322">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="708" y="354" width="503" height="343" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1592375791322" />
+    <state x="468" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1592404551012">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="468" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1592404551012" />
+    <state x="600" y="155" key="FileChooserDialogImpl" timestamp="1592289404414">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-990" y="302" key="FileChooserDialogImpl/0.0.1920.1040/-1440.174.1440.860@-1440.174.1440.860" timestamp="1592288588955" />
+    <state x="600" y="155" key="FileChooserDialogImpl/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1592289404414" />
+    <state width="1867" height="269" key="GridCell.Tab.0.bottom" timestamp="1592551572186">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1867" height="269" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1592551572186" />
+    <state width="1867" height="269" key="GridCell.Tab.0.center" timestamp="1592551572186">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1867" height="269" key="GridCell.Tab.0.center/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1592551572186" />
+    <state width="1867" height="269" key="GridCell.Tab.0.left" timestamp="1592551572185">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1867" height="269" key="GridCell.Tab.0.left/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1592551572185" />
+    <state width="1867" height="269" key="GridCell.Tab.0.right" timestamp="1592551572186">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1867" height="269" key="GridCell.Tab.0.right/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1592551572186" />
+    <state width="1867" height="269" key="GridCell.Tab.1.bottom" timestamp="1592551572183">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1867" height="269" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1592551572183" />
+    <state width="1867" height="269" key="GridCell.Tab.1.center" timestamp="1592551572183">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1867" height="269" key="GridCell.Tab.1.center/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1592551572183" />
+    <state width="1867" height="269" key="GridCell.Tab.1.left" timestamp="1592551572183">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1867" height="269" key="GridCell.Tab.1.left/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1592551572183" />
+    <state width="1867" height="269" key="GridCell.Tab.1.right" timestamp="1592551572183">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1867" height="269" key="GridCell.Tab.1.right/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1592551572183" />
+    <state width="1867" height="333" key="GridCell.Tab.2.bottom" timestamp="1592405609758">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1867" height="333" key="GridCell.Tab.2.bottom/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1592405609758" />
+    <state width="1867" height="333" key="GridCell.Tab.2.center" timestamp="1592405609758">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1867" height="333" key="GridCell.Tab.2.center/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1592405609758" />
+    <state width="1867" height="333" key="GridCell.Tab.2.left" timestamp="1592405609758">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1867" height="333" key="GridCell.Tab.2.left/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1592405609758" />
+    <state width="1867" height="333" key="GridCell.Tab.2.right" timestamp="1592405609758">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1867" height="333" key="GridCell.Tab.2.right/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1592405609758" />
+    <state x="225" y="0" key="SettingsEditor" timestamp="1592298643418">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="225" y="0" key="SettingsEditor/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1592298643418" />
+    <state width="623" height="498" key="SwitcherDM" timestamp="1592381686415">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="623" height="498" key="SwitcherDM/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1592381686415" />
+  </component>
+</project>
