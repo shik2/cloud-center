@@ -3,6 +3,13 @@
 
 <mapper namespace="com.intelligence.edge.dao.CarBasicDataMapper">
 
+    <select id="getAllCarBasicData" resultType="CarBasicData">
+        SELECT * from car_basicdata;
+    </select>
+
+    <select id="getCarBasicDataByID" resultType="CarBasicData" parameterType="String">
+        SELECT * from car_basicdata WHERE id=#{carID};
+    </select>
 
     <insert id="insertCarBasicData" parameterType="CarBasicData" useGeneratedKeys="true"
             keyProperty="id">
