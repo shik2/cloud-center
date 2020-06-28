@@ -1,6 +1,8 @@
 package com.intelligence.edge.service.impl;
 
 import com.intelligence.edge.config.CarConfig;
+import com.intelligence.edge.dao.CarBasicDataMapper;
+import com.intelligence.edge.pojo.CarBasicData;
 import com.intelligence.edge.server.CarENVServer;
 import com.intelligence.edge.server.CarVideoServer;
 import com.intelligence.edge.service.CarNetService;
@@ -20,23 +22,26 @@ import java.util.List;
  * @Description 无人车服务
  **/
 @Service
-@Slf4j(topic="c.CarNetServiceImpl")
+@Slf4j(topic = "c.CarNetServiceImpl")
 public class CarNetServiceImpl implements CarNetService {
     @Autowired
     private CarConfig carConfig;
+    @Autowired
+    private CarBasicDataMapper carBasicDataMapper;
 
     /**
      * 测试设备连通性
-     * @param host
+     *
+     * @param host 设备ip地址
      */
     public int ping(String host) {
         try {
             InetAddress inetAddress = InetAddress.getByName(host);
-            boolean reachable = inetAddress.isReachable(5*1000);
-            if(reachable) {
+            boolean reachable = inetAddress.isReachable(3 * 1000);
+            if (reachable) {
                 log.info("ping success. Host name: " + inetAddress.getHostName() + ", IP addr: " + inetAddress.getHostAddress());
                 return 1;
-            }else {
+            } else {
                 log.info("ping failed.");
                 return 0;
             }
@@ -55,12 +60,51 @@ public class CarNetServiceImpl implements CarNetService {
     List<CarENVServer> cenvList = new ArrayList<>();
     List<CarVideoServer> cvsList = new ArrayList<>();
 
+
+    public int connect(String carID) {
+        log.info("开始连接智能车 " + carID);
+        // 判断是已经开启
+        if (carBasicDataMapper.getConnectState(carID) == 1) {
+            log.info("端口占用");
+            return 0;
+        } else {
+            CarBasicData param = new CarBasicData();
+            param.setState(1);
+            param.setCarID(carID);
+            log.info("修改对象"+ param);
+            if (carBasicDataMapper.setConnectState(param) == 1) {
+                receiveData(carID);
+                receiveVideo(carID);
+                return 1;
+            }
+            return 2;
+        }
+    }
+
+    public int closeConnect(String carID){
+        if (carBasicDataMapper.getConnectState(carID) == 0) {
+            log.info(carID+"已经断开连接");
+            return 0;
+        } else {
+            CarBasicData param = new CarBasicData();
+            param.setState(0);
+            param.setCarID(carID);
+            if (carBasicDataMapper.setConnectState(param) == 1) {
+                closeConnection(carID);
+                closeVideo(carID);
+                log.info(carID+"成功断开");
+                return 1;
+            }
+            return 2;
+        }
+    }
+
+
     /**
      * 接收无人车的发送的数据报文
      *
      * @param carID
      */
-    @Override
     public void receiveData(String carID) {
 
         try {
@@ -114,7 +158,6 @@ public class CarNetServiceImpl implements CarNetService {
         }
     }
 
-    @Override
     public void closeConnection(String carID) {
         for (CarENVServer cbs : cenvList) {
             if (cbs.getCarID().equals(carID)) {
@@ -126,7 +169,6 @@ public class CarNetServiceImpl implements CarNetService {
         }
     }
 
-    @Override
     public void closeVideo(String carID) {
         for (CarVideoServer cvs : cvsList) {
             if (cvs.getCarID().equals(carID)) {

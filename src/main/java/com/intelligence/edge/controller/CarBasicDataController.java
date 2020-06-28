@@ -1,5 +1,6 @@
 package com.intelligence.edge.controller;
 
+import com.intelligence.edge.dao.CarBasicDataMapper;
 import com.intelligence.edge.pojo.CarBasicData;
 import com.intelligence.edge.service.CarBasicDataService;
 import org.springframework.beans.factory.annotation.Autowired;

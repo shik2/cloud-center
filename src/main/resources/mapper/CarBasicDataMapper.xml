@@ -38,4 +38,15 @@
         where id = #{carID}
     </update>
 
+    <select id="getConnectState" resultType="int" parameterType="String">
+        SELECT state from car_basicdata WHERE id=#{carID};
+    </select>
+
+    <update id="setConnectState" parameterType="CarBasicData">
+        update car_basicdata
+            set
+            state = #{state}
+        where id = #{carID}
+    </update>
+
 </mapper>

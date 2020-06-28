@@ -19,4 +19,9 @@ public interface CarBasicDataMapper {
 
     int updateCarBasicData(CarBasicData carBasicData);
 
+    // 获取对应设备的连接状态
+    int getConnectState(String carID);
+
+    // 修改设备的连接状态
+    int setConnectState(CarBasicData carBasicData);
 }
