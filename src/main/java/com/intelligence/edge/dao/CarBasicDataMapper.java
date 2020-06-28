@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 @Mapper
 public interface CarBasicDataMapper {
 
@@ -24,4 +25,7 @@ public interface CarBasicDataMapper {
 
     // 修改设备的连接状态
     int setConnectState(CarBasicData carBasicData);
+
+    // 重置所有连接状态
+    int resetState();
 }

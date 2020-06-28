@@ -49,4 +49,10 @@
         where id = #{carID}
     </update>
 
+    <update id="resetState" parameterType="CarBasicData">
+        update car_basicdata
+            set
+            state = 0
+    </update>
+
 </mapper>
