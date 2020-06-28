@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2457d831-492e-42be-859f-b5c74cdf7396" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/runner/ResetConnect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/dao/CarBasicDataMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/dao/CarBasicDataMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/CarBasicDataMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/CarBasicDataMapper.xml" afterDir="false" />
-    </list>
+    <list default="true" id="2457d831-492e-42be-859f-b5c74cdf7396" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -195,7 +190,7 @@
       <workItem from="1593243885567" duration="1031000" />
       <workItem from="1593244946611" duration="2348000" />
       <workItem from="1593247356699" duration="40488000" />
-      <workItem from="1593350845659" duration="598000" />
+      <workItem from="1593350845659" duration="1078000" />
     </task>
     <task id="LOCAL-00001" summary="添加webSocket">
       <created>1593255879692</created>
@@ -218,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593344911798</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="启动重置所有设备的连接">
+      <created>1593351499499</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1593351499499</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,7 +230,8 @@
     <MESSAGE value="添加webSocket" />
     <MESSAGE value="添加了连接测试功能" />
     <MESSAGE value="完善了设备管理功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="完善了设备管理功能" />
+    <MESSAGE value="启动重置所有设备的连接" />
+    <option name="LAST_COMMIT_MESSAGE" value="启动重置所有设备的连接" />
   </component>
   <component name="WindowStateProjectService">
     <state x="452" y="96" key="#Inspections" timestamp="1592394568869">
@@ -256,10 +259,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="468" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1592404551012" />
-    <state x="376" y="11" key="CommitChangelistDialog2" timestamp="1593344910929">
+    <state x="376" y="11" key="CommitChangelistDialog2" timestamp="1593351498112">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="376" y="11" key="CommitChangelistDialog2/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1593344910929" />
+    <state x="376" y="11" key="CommitChangelistDialog2/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1593351498112" />
     <state x="600" y="155" key="FileChooserDialogImpl" timestamp="1592289404414">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -329,6 +332,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="623" height="498" key="SwitcherDM/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1592381686415" />
+    <state x="452" y="188" key="Vcs.Push.Dialog.v2" timestamp="1593351506044">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="452" y="188" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1593351506044" />
     <state x="539" y="5" width="840" height="1034" key="search.everywhere.popup" timestamp="1593351005943">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
