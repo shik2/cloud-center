@@ -4,10 +4,13 @@ import com.intelligence.edge.config.CarConfig;
 import com.intelligence.edge.server.CarENVServer;
 import com.intelligence.edge.server.CarVideoServer;
 import com.intelligence.edge.service.CarNetService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,9 +20,34 @@ import java.util.List;
  * @Description 无人车服务
  **/
 @Service
+@Slf4j(topic="c.CarNetServiceImpl")
 public class CarNetServiceImpl implements CarNetService {
     @Autowired
     private CarConfig carConfig;
+
+    /**
+     * 测试设备连通性
+     * @param host
+     */
+    public int ping(String host) {
+        try {
+            InetAddress inetAddress = InetAddress.getByName(host);
+            boolean reachable = inetAddress.isReachable(5*1000);
+            if(reachable) {
+                log.info("ping success. Host name: " + inetAddress.getHostName() + ", IP addr: " + inetAddress.getHostAddress());
+                return 1;
+            }else {
+                log.info("ping failed.");
+                return 0;
+            }
+        } catch (UnknownHostException e1) {
+            e1.printStackTrace();
+        } catch (IOException e2) {
+            e2.printStackTrace();
+        }
+        return 0;
+    }
+
 
     /**
      * 无人车的接收视频文件和环境数据的连接列表，每辆车对应一个基本数据接收端

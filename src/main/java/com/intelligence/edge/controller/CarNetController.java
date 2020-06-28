@@ -2,6 +2,7 @@ package com.intelligence.edge.controller;
 
 import com.intelligence.edge.config.CarConfig;
 import com.intelligence.edge.service.CarNetService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,6 +17,7 @@ import java.io.IOException;
 @RestController
 @CrossOrigin
 @RequestMapping("/data/car")
+@Slf4j(topic="c.CarNetController")
 public class CarNetController {
 
     @Autowired
@@ -25,7 +27,19 @@ public class CarNetController {
     private CarConfig carConfig;
 
     /**
-     * 传入设备id，开启对应无人车环境数据和视频数据的udp接收端
+     * 测试新添加设备是否可以连接
+     * @param IP
+     * @return
+     */
+    @RequestMapping("/testConnect")
+    public int testConnect(@RequestParam("IP") String IP){
+        log.info("设备ip:"+ IP);
+        return carServer.ping(IP);
+    }
+
+
+    /**
+     * 传入设备id，开启对应无人车环境数据和视频数据的udp接收端,修改对应车
      *
      * @param carID
      * @return

@@ -47,6 +47,8 @@ public class CarBasicDataController {
      */
     @RequestMapping(value = "insertCar")
     public int insertCarBasicData(@RequestBody CarBasicData carBasicData) {
+        carBasicData.setElectricity(100);
+        carBasicData.setState(0);
         return carBasicDataService.insertCarBasicData(carBasicData);
     }
 

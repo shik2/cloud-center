@@ -26,6 +26,11 @@ public class WebSocketController {
         return new ModelAndView("websocket");
     }
 
+    @GetMapping("info")
+    public ModelAndView info(){
+        return new ModelAndView("info");
+    }
+
     @RequestMapping("/push/{toUserId}")
     public ResponseEntity<String> pushToWeb(String message, @PathVariable String toUserId) throws IOException {
         WebSocketServer.sendInfo(message,toUserId);

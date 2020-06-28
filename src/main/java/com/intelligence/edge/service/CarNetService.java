@@ -13,4 +13,6 @@ public interface CarNetService {
     void receiveVideo(String carID);
 
     void closeVideo(String carID);
+
+    int ping(String ip);
 }

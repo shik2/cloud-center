@@ -1,11 +1,13 @@
 package com.intelligence.edge.server;
 
+import com.alibaba.fastjson.JSONObject;
 import com.google.gson.Gson;
 import com.intelligence.edge.dao.CarBasicDataMapper;
 import com.intelligence.edge.dao.CarENVDataMapper;
 import com.intelligence.edge.pojo.EnvironmentInfo;
 import com.intelligence.edge.utils.SpringUtils;
 import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Scope;
@@ -21,6 +23,7 @@ import java.net.SocketException;
  * 功能说明： 负责接收无人车发送的环境数据（经纬度、速度、温度、湿度...）,存入MMySQL数据库中
  */
 @Data
+@Slf4j(topic = "c.CarENVServer")
 public class CarENVServer {
     private String carID;
     private int port;
@@ -33,8 +36,6 @@ public class CarENVServer {
     private CarENVDataMapper carENVDataMapper = applicationContext.getBean(CarENVDataMapper.class);
 
 
-
-
     public CarENVServer(String carID, int port) throws SocketException {
         this.carID = carID;
         this.port = port;
@@ -42,6 +43,7 @@ public class CarENVServer {
 
     /**
      * 开启数据接收服务端
+     *
      * @throws SocketException
      */
     public void start() throws SocketException {
@@ -76,17 +78,17 @@ public class CarENVServer {
             byte[] buf = new byte[2048];
             try {
                 DatagramPacket packet = new DatagramPacket(buf, buf.length);
-                System.out.println("server is on，waiting for client to send data......");
+                log.info("server is on，waiting for client to send data......");
                 while (runFlag) {
                     socket.receive(packet);
-                    System.out.println(carID + " server received data from client：");
+                    log.info(carID + " server received data from client：");
                     String strReceive =
                             new String(packet.getData(), 0,
                                     packet.getLength()) +
                                     " from " +
                                     packet.getAddress().getHostAddress() +
                                     ":" + packet.getPort();
-                    System.out.println(strReceive);
+                    log.info(strReceive);
 
                     String objStr = new String(packet.getData(), 0,
                             packet.getLength());
@@ -95,10 +97,14 @@ public class CarENVServer {
                     Gson gson = new Gson();
                     EnvironmentInfo ei = gson.fromJson(objStr, EnvironmentInfo.class);
                     ei.setCarID(carID);
-                    System.out.println(ei);
+                    log.info("解析获得对象：" + ei);
 
                     // 将解析的环境数据对象存入到数据库中
-                    carENVDataMapper.insertCarENVData(ei);
+//                    carENVDataMapper.insertCarENVData(ei);
+
+                    String jsonString = JSONObject.toJSONString(ei);
+
+                    WebSocketServer.sendInfo(jsonString, carID);
 
                     //由于dp_receive在接收了数据之后，其内部消息长度值会变为实际接收的消息的字节数，
                     //所以这里要将dp_receive的内部消息长度重新置为1024

@@ -11,13 +11,13 @@ import lombok.Data;
 public class EnvironmentInfo {
     private String time;
     private String carID;
-    private Long longitude;
-    private Long latitude;
+    private Double longitude;
+    private Double latitude;
     private Double temperature;
     private Double wind;
     private Double humidity;
 
-    public EnvironmentInfo(String time, String carID, Long longitude, Long latitude, Double temperature, Double wind, Double humidity) {
+    public EnvironmentInfo(String time, String carID, Double longitude, Double latitude, Double temperature, Double wind, Double humidity) {
         this.time = time;
         this.carID = carID;
         this.longitude = longitude;

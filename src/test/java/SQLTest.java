@@ -17,7 +17,7 @@ public class SQLTest {
 
     @Test
     public void test() {
-        EnvironmentInfo ei = new EnvironmentInfo("2020-11-11", "car1", 120L, 23L, 5.5, 9.1, 3.2);
+        EnvironmentInfo ei = new EnvironmentInfo("2020-11-11", "car1", 120.0, 23.0, 5.5, 9.1, 3.2);
         System.out.println(ei);
         carENVDataMapper.insertCarENVData(ei);
     }

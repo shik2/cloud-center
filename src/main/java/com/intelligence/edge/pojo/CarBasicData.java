@@ -16,14 +16,19 @@ public class CarBasicData {
     private String carID;
     private String type;
     private String owner;
+    private String ip;
     private Integer electricity;
-    private String state;
+    private Integer state;
 
-    public CarBasicData(@NotNull String carID, String type, String owner, Integer electricity, String state) {
+    public CarBasicData() {
+    }
+
+    public CarBasicData(@NotNull String carID, String type, String owner, Integer electricity, Integer state, String ip) {
         this.carID = carID;
         this.type = type;
         this.owner = owner;
         this.electricity = electricity;
         this.state = state;
+        this.ip = ip;
     }
 }

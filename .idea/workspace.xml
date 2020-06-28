@@ -2,61 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2457d831-492e-42be-859f-b5c74cdf7396" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_47.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_attoparser_attoparser_2_0_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_thymeleaf_2_1_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_websocket_2_1_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_messaging_5_1_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_websocket_5_1_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_extras_thymeleaf_extras_java8time_3_0_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_11_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring5_3_0_11_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/config/WebSocketConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/controller/WebSocketController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/server/WebSocketServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/webSocket.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/cloud-center.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cloud-center.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/info.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/CarNetTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/Starter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/Starter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/dao/CarBasicDataMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/dao/CarBasicDataMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/dao/CarENVDataMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/dao/CarENVDataMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/config/CarConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/config/CarConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/controller/CarBasicDataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/controller/CarBasicDataController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/controller/CarNetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/controller/CarNetController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/controller/WebSocketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/controller/WebSocketController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/pojo/CarBasicData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/pojo/CarBasicData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/pojo/EnvironmentInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/pojo/EnvironmentInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/server/CarENVServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/server/CarENVServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/server/WebSocketServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/server/WebSocketServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/service/CarNetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/service/CarNetService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/service/impl/CarNetServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/service/impl/CarNetServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/CarBasicDataMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/CarBasicDataMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/cloud-center.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/spring-configuration-metadata.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/Starter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/config/BeanConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/config/CarConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/controller/CarBasicDataController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/controller/CarNetController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/dao/CarBasicDataMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/dao/CarENVDataMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/data/TempData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/pojo/CarBasicData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/pojo/EnvironmentInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/server/CarENVServer$Task.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/server/CarENVServer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/server/CarVideoServer$Task.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/server/CarVideoServer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/service/CarBasicDataService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/service/CarENVDataService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/service/CarNetService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/service/impl/CarBasicDataServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/service/impl/CarENVDataServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/service/impl/CarNetServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/utils/SpringUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/CarBasicDataMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/CarENVDataMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/BasicControllerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/cloud-center.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/SQLTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/UDPClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/webSocket.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/webSocket.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BasicControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BasicControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SQLTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SQLTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +46,7 @@
       <list>
         <option value="Interface" />
         <option value="FxmlFile" />
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
@@ -119,6 +84,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -166,17 +132,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UDPVideoClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="UDPVideoClient" />
-      <module name="cloud-center" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="BasicControllerTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cloud-center" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="BasicControllerTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CarNetTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cloud-center" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CarNetTest" />
       <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -209,10 +178,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.Starter" />
+        <item itemvalue="JUnit.CarNetTest.test" />
         <item itemvalue="JUnit.SQLTest.test" />
         <item itemvalue="Application.UDPClient" />
         <item itemvalue="JUnit.BasicControllerTest.test" />
-        <item itemvalue="Application.UDPVideoClient" />
       </list>
     </recent_temporary>
   </component>
@@ -240,12 +209,24 @@
       <workItem from="1593002342267" duration="256000" />
       <workItem from="1593243885567" duration="1031000" />
       <workItem from="1593244946611" duration="2348000" />
-      <workItem from="1593247356699" duration="2055000" />
+      <workItem from="1593247356699" duration="32971000" />
     </task>
+    <task id="LOCAL-00001" summary="添加webSocket">
+      <created>1593255879692</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1593255879692</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="添加webSocket" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加webSocket" />
   </component>
   <component name="WindowStateProjectService">
     <state x="452" y="96" key="#Inspections" timestamp="1592394568869">
@@ -261,10 +242,10 @@
       <screen x="-1440" y="174" width="1440" height="860" />
     </state>
     <state x="-1018" y="390" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/-1440.174.1440.860@-1440.174.1440.860" timestamp="1592277622006" />
-    <state x="721" y="162" key="#com.intellij.ide.util.MemberChooser" timestamp="1592546555842">
+    <state x="721" y="162" key="#com.intellij.ide.util.MemberChooser" timestamp="1593333641647">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="721" y="162" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1592546555842" />
+    <state x="721" y="162" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1593333641647" />
     <state x="708" y="354" width="503" height="343" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1592975910658">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -273,43 +254,55 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="468" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1592404551012" />
+    <state x="376" y="11" key="CommitChangelistDialog2" timestamp="1593255877376">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="376" y="11" key="CommitChangelistDialog2/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1593255877376" />
     <state x="600" y="155" key="FileChooserDialogImpl" timestamp="1592289404414">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-990" y="302" key="FileChooserDialogImpl/0.0.1920.1040/-1440.174.1440.860@-1440.174.1440.860" timestamp="1592288588955" />
     <state x="600" y="155" key="FileChooserDialogImpl/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1592289404414" />
-    <state width="1867" height="267" key="GridCell.Tab.0.bottom" timestamp="1593248088939">
+    <state width="1867" height="374" key="GridCell.Tab.0.bottom" timestamp="1593333739136">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1867" height="267" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1593248088939" />
-    <state width="1867" height="267" key="GridCell.Tab.0.center" timestamp="1593248088939">
+    <state width="1387" height="340" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1440.174.1440.860@-1440.174.1440.860" timestamp="1593264417950" />
+    <state width="1867" height="374" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1593333739136" />
+    <state width="1867" height="374" key="GridCell.Tab.0.center" timestamp="1593333739136">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1867" height="267" key="GridCell.Tab.0.center/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1593248088939" />
-    <state width="1867" height="267" key="GridCell.Tab.0.left" timestamp="1593248088939">
+    <state width="1387" height="340" key="GridCell.Tab.0.center/0.0.1920.1040/-1440.174.1440.860@-1440.174.1440.860" timestamp="1593264417950" />
+    <state width="1867" height="374" key="GridCell.Tab.0.center/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1593333739136" />
+    <state width="1867" height="374" key="GridCell.Tab.0.left" timestamp="1593333739136">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1867" height="267" key="GridCell.Tab.0.left/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1593248088939" />
-    <state width="1867" height="267" key="GridCell.Tab.0.right" timestamp="1593248088939">
+    <state width="1387" height="340" key="GridCell.Tab.0.left/0.0.1920.1040/-1440.174.1440.860@-1440.174.1440.860" timestamp="1593264417950" />
+    <state width="1867" height="374" key="GridCell.Tab.0.left/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1593333739136" />
+    <state width="1867" height="374" key="GridCell.Tab.0.right" timestamp="1593333739136">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1867" height="267" key="GridCell.Tab.0.right/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1593248088939" />
-    <state width="1867" height="267" key="GridCell.Tab.1.bottom" timestamp="1593248088939">
+    <state width="1387" height="340" key="GridCell.Tab.0.right/0.0.1920.1040/-1440.174.1440.860@-1440.174.1440.860" timestamp="1593264417950" />
+    <state width="1867" height="374" key="GridCell.Tab.0.right/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1593333739136" />
+    <state width="1867" height="374" key="GridCell.Tab.1.bottom" timestamp="1593333739136">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1867" height="267" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1593248088939" />
-    <state width="1867" height="267" key="GridCell.Tab.1.center" timestamp="1593248088939">
+    <state width="1387" height="340" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1440.174.1440.860@-1440.174.1440.860" timestamp="1593264417951" />
+    <state width="1867" height="374" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1593333739136" />
+    <state width="1867" height="374" key="GridCell.Tab.1.center" timestamp="1593333739136">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1867" height="267" key="GridCell.Tab.1.center/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1593248088939" />
-    <state width="1867" height="267" key="GridCell.Tab.1.left" timestamp="1593248088939">
+    <state width="1387" height="340" key="GridCell.Tab.1.center/0.0.1920.1040/-1440.174.1440.860@-1440.174.1440.860" timestamp="1593264417950" />
+    <state width="1867" height="374" key="GridCell.Tab.1.center/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1593333739136" />
+    <state width="1867" height="374" key="GridCell.Tab.1.left" timestamp="1593333739136">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1867" height="267" key="GridCell.Tab.1.left/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1593248088939" />
-    <state width="1867" height="267" key="GridCell.Tab.1.right" timestamp="1593248088939">
+    <state width="1387" height="340" key="GridCell.Tab.1.left/0.0.1920.1040/-1440.174.1440.860@-1440.174.1440.860" timestamp="1593264417950" />
+    <state width="1867" height="374" key="GridCell.Tab.1.left/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1593333739136" />
+    <state width="1867" height="374" key="GridCell.Tab.1.right" timestamp="1593333739136">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1867" height="267" key="GridCell.Tab.1.right/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1593248088939" />
+    <state width="1387" height="340" key="GridCell.Tab.1.right/0.0.1920.1040/-1440.174.1440.860@-1440.174.1440.860" timestamp="1593264417951" />
+    <state width="1867" height="374" key="GridCell.Tab.1.right/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1593333739136" />
     <state width="1867" height="333" key="GridCell.Tab.2.bottom" timestamp="1592405609758">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -326,10 +319,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1867" height="333" key="GridCell.Tab.2.right/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1592405609758" />
-    <state x="225" y="0" key="SettingsEditor" timestamp="1592975843104">
+    <state x="259" y="99" key="SettingsEditor" timestamp="1593324418466">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="225" y="0" key="SettingsEditor/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1592975843104" />
+    <state x="259" y="99" key="SettingsEditor/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1593324418466" />
     <state width="623" height="498" key="SwitcherDM" timestamp="1592381686415">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

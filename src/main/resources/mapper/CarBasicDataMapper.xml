@@ -4,7 +4,7 @@
 <mapper namespace="com.intelligence.edge.dao.CarBasicDataMapper">
 
     <select id="getAllCarBasicData" resultType="CarBasicData">
-        SELECT * from car_basicdata;
+        SELECT *,id carID  from car_basicdata;
     </select>
 
     <select id="getCarBasicDataByID" resultType="CarBasicData" parameterType="String">
@@ -34,9 +34,7 @@
         update car_basicdata
             set
             type = #{type},
-            owner = #{owner},
-            electricity = #{electricity},
-            state =#{state}
+            owner = #{owner}
         where id = #{carID}
     </update>
 
