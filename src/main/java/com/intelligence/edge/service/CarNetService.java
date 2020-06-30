@@ -14,7 +14,7 @@ public interface CarNetService {
 //
 //    void closeVideo(String carID);
 
-    int ping(String ip);
+    boolean ping(String ip);
 
     int connect(String carID);
 

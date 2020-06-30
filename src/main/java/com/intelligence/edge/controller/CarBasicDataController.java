@@ -3,7 +3,9 @@ package com.intelligence.edge.controller;
 import com.intelligence.edge.dao.CarBasicDataMapper;
 import com.intelligence.edge.pojo.CarBasicData;
 import com.intelligence.edge.service.CarBasicDataService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,6 +14,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/device/car")
+@Slf4j(topic = "c.CarBasicDataController")
 public class CarBasicDataController {
     @Autowired
     CarBasicDataService carBasicDataService;
@@ -43,14 +46,18 @@ public class CarBasicDataController {
 
     /**
      * 新增无人车
-     * @param carBasicData
+     * @param car
      * @return
      */
-    @RequestMapping(value = "insertCar")
-    public int insertCarBasicData(@RequestBody CarBasicData carBasicData) {
-        carBasicData.setElectricity(100);
-        carBasicData.setState(0);
-        return carBasicDataService.insertCarBasicData(carBasicData);
+    @PostMapping(value = "insertCar")
+    public int insertCarBasicData(@RequestBody CarBasicData car) {
+        car.setElectricity(100);
+        car.setState(0);
+        log.info("新增car:"+car);
+        if(car.getCarID()==null||car.getIp()==null){
+            return 0;
+        }
+        return carBasicDataService.insertCarBasicData(car);
     }
 
     // 删除无人车
@@ -60,8 +67,9 @@ public class CarBasicDataController {
     }
 
     // 更新无人车信息
-    @RequestMapping(value = "updateCar")
+    @PostMapping(value = "updateCar")
     public int updateCarBasicData(@RequestBody CarBasicData carBasicData) {
+        log.info("carBasicData:"+carBasicData);
         return carBasicDataService.updateCarBasicData(carBasicData);
     }
 

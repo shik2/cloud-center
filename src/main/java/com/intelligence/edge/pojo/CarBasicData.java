@@ -19,6 +19,8 @@ public class CarBasicData {
     private String ip;
     private Integer electricity;
     private Integer state;
+    private Double longitude;
+    private Double latitude;
 
     public CarBasicData() {
     }

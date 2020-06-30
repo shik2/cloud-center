@@ -4,7 +4,9 @@ import com.alibaba.fastjson.JSONObject;
 import com.google.gson.Gson;
 import com.intelligence.edge.dao.CarBasicDataMapper;
 import com.intelligence.edge.dao.CarENVDataMapper;
+import com.intelligence.edge.data.CarTempData;
 import com.intelligence.edge.pojo.EnvironmentInfo;
+import com.intelligence.edge.pojo.Position;
 import com.intelligence.edge.utils.SpringUtils;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
@@ -101,9 +103,11 @@ public class CarENVServer {
 
                     // 将解析的环境数据对象存入到数据库中
 //                    carENVDataMapper.insertCarENVData(ei);
+                    Position pos = new Position(ei.getLongitude(),ei.getLatitude());
+                    CarTempData.carPos.put(carID,pos);
 
+                    // websockt 推送
                     String jsonString = JSONObject.toJSONString(ei);
-
                     WebSocketServer.sendInfo(jsonString, carID);
 
                     //由于dp_receive在接收了数据之后，其内部消息长度值会变为实际接收的消息的字节数，

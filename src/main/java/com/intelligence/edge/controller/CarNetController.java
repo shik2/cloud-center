@@ -18,7 +18,7 @@ import java.io.IOException;
 @RestController
 @CrossOrigin
 @RequestMapping("/data/car")
-@Slf4j(topic="c.CarNetController")
+@Slf4j(topic = "c.CarNetController")
 public class CarNetController {
 
     @Autowired
@@ -33,13 +33,14 @@ public class CarNetController {
 
     /**
      * 测试新添加设备是否可以连接
+     *
      * @param IP
      * @return
      */
     @RequestMapping("/testConnect")
-    public int testConnect(@RequestParam("IP") String IP){
-        log.info("设备ip:"+ IP);
-        return carServer.ping(IP);
+    public int testConnect(@RequestParam("IP") String IP) {
+        log.info("设备ip:" + IP);
+        return carServer.ping(IP) ? 1 : 0;
     }
 
 
@@ -51,11 +52,11 @@ public class CarNetController {
      * @throws IOException
      */
     @RequestMapping("/connect")
-    public int connect(@RequestParam("id") String carID){
+    public int connect(@RequestParam("carID") String carID) {
         // 设备无法连通
         String carIP = carConfig.getCarIP().get(carID);
-        if(carServer.ping(carIP) == 0){
-            log.info("设备离线："+carID);
+        if (!carServer.ping(carIP)) {
+            log.info("设备离线：" + carID);
             return 0;
         }
         return carServer.connect(carID);
@@ -63,15 +64,16 @@ public class CarNetController {
 
     /**
      * 关闭对应id设备的数据接收端
+     *
      * @param carID
      * @return
      */
     @RequestMapping("/closeConnect")
-    public int closeConnect(@RequestParam("id") String carID) {
+    public int closeConnect(@RequestParam("carID") String carID) {
         // 设备无法连通
         String carIP = carConfig.getCarIP().get(carID);
-        if(carServer.ping(carIP) == 0){
-            log.info("设备离线："+carID);
+        if (!carServer.ping(carIP)) {
+            log.info("设备离线：" + carID);
             return -1;
         }
         return carServer.closeConnect(carID);

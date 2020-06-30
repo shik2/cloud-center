@@ -17,11 +17,13 @@
         (`id`,
         `type`,
         `owner`,
+        `ip`,
         `electricity`,
         `state`)
         VALUES (#{carID},
         #{type},
         #{owner},
+        #{ip},
         #{electricity},
         #{state});
     </insert>
