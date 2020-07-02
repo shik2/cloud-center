@@ -27,7 +27,6 @@ public class CarControlServer {
     private Socket socket;
     private Thread socketThread;
     private DataOutputStream out;
-    private DataInputStream in;
 
     public CarControlServer(String carID, int port) throws IOException {
         this.carID = carID;
@@ -60,15 +59,15 @@ public class CarControlServer {
             try {
                 socket = server.accept();// 等待客户连接
                 out = new DataOutputStream(socket.getOutputStream());
-                System.out.println("22222");
                 DataInputStream in = new DataInputStream(socket.getInputStream());// 读取客户端传过来信息的DataInputStream
                 String regex = "/^id=.*/";
                 while (true) {
                     String accpet = in.readUTF();// 读取来自客户端的信息
                     log.info("收到信息" + accpet);//输出来自客户端的信息
-                    CarTempData.carState.put(carID, 1);
+                    CarTempData.carState.put(carID, 1);//表示设备已经在线
                     break;
                 }
+                log.info("设备状态修改完毕");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -82,7 +81,7 @@ public class CarControlServer {
         server = new ServerSocket(port);//创建  ServerSocket类
         socket = server.accept();// 等待客户连接
         out = new DataOutputStream(socket.getOutputStream());
-        in = new DataInputStream(socket.getInputStream());// 读取客户端传过来信息的DataInputStream
+        DataInputStream in = new DataInputStream(socket.getInputStream());// 读取客户端传过来信息的DataInputStream
         String regex = "/^id=.*/";
         while (true) {
             String accpet = in.readUTF();// 读取来自客户端的信息
@@ -115,13 +114,16 @@ public class CarControlServer {
         }
     }
 
-    public void close() {
+    public void reset() {
         try {
-            socket.close();
             server.close();
-            in.close();
             out.close();
+            CarTempData.carState.put(carID, 0);
+            openConnect();
+            CarTempData.carState.put(carID, 1);
+            log.info("------！");
         } catch (IOException e) {
+            e.printStackTrace();
             log.info("关闭异常！");
         }
     }

@@ -8,5 +8,7 @@ public interface CarControlService {
 
     void control(String carID, String instruction);
 
-    void closeConnection(String carID);
+//    void closeConnection(String carID);
+
+    void reset(String carID);
 }

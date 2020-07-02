@@ -22,7 +22,7 @@ import java.util.Map;
 public class CarTempData {
     public static Map<String, Position> carPos = new HashMap<>();
     public static List<CarBasicData> carList;
-    public static List<CarControlServer> ccsList = new ArrayList<>();
+    public static Map<String,CarControlServer> ccsMap = new HashMap<>();
     // 无人车视频数据接收端口map
     public static Map<String, String> carIP = new HashMap<>();
 

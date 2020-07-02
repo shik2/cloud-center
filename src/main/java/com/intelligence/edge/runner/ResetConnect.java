@@ -5,6 +5,7 @@ import com.intelligence.edge.dao.CarBasicDataMapper;
 import com.intelligence.edge.data.CarTempData;
 import com.intelligence.edge.pojo.CarBasicData;
 import com.intelligence.edge.server.CarControlServer;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -17,6 +18,7 @@ import java.util.List;
  * @date 2020/06/28
  **/
 @Component
+@Slf4j(topic = "c.ResetConnect")
 public class ResetConnect implements CommandLineRunner {
 
     @Autowired
@@ -33,8 +35,8 @@ public class ResetConnect implements CommandLineRunner {
         for (CarBasicData carBasicData : CarTempData.carList) {
             CarControlServer server = new CarControlServer(carBasicData.getCarID(), carConfig.getCarControlPort().get(carBasicData.getCarID()));
             server.openConnect();
-            CarTempData.ccsList.add(server);
-            System.out.println("+1");
+            CarTempData.ccsMap.put(server.getCarID(),server);
+            log.info("开启控制服务端："+server.getCarID());
         }
     }
 }

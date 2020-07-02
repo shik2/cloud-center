@@ -55,8 +55,12 @@ public class CarNetController {
     @RequestMapping("/connect")
     public int connect(@RequestParam("carID") String carID) {
         // 设备无法连通
-        String carIP = CarTempData.carIP.get(carID);
+        /*String carIP = CarTempData.carIP.get(carID);
         if (!carServer.ping(carIP)) {
+            log.info("设备离线：" + carID);
+            return 0;
+        }*/
+        if(CarTempData.carState.get(carID) == 0){
             log.info("设备离线：" + carID);
             return 0;
         }

@@ -28,28 +28,20 @@ public class CarControlServiceImpl implements CarControlService {
 
     @Override
     public void control(String carID,String instruction) {
-        CarControlServer cc = null;
-        for (CarControlServer client : CarTempData.ccsList) {
-            if(client.getCarID().equals(carID)){
-                cc = client;
-                break;
-            }
-        }
-        if (cc == null){
-            log.info("无该车连接");
-        }
+        CarControlServer cc = CarTempData.ccsMap.get(carID);
         cc.control(instruction);
     }
 
-    public void closeConnection(String carID) {
-        for (CarControlServer client : CarTempData.ccsList) {
-            if (client.getCarID().equals(carID)) {
-                client.close();
-                log.info("关闭已有车辆控制连接");
-                break;
-            }
-        }
+    @Override
+    public void reset(String carID) {
+        CarControlServer cc = CarTempData.ccsMap.get(carID);
+        cc.reset();
     }
+
+    /*public void closeConnection(String carID) {
+        CarControlServer cc = CarTempData.ccsMap.get(carID);
+        cc.close();
+    }*/
 
 
 }
