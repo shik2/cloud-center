@@ -24,8 +24,8 @@ public class CarConfig {
     // 无人车视频数据接收端口map
     private Map<String, Integer> carVideoPort = new HashMap<>();
 
-    // 无人车视频数据接收端口map
-    private Map<String, String> carIP = new HashMap<>();
+    // 无人车控制服务端map
+    private Map<String, Integer> carControlPort = new HashMap<>();
 
     // 无人车连接状态map
     private Map<String, Boolean> connectFlag = new HashMap<>();

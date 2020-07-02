@@ -2,6 +2,7 @@ package com.intelligence.edge.controller;
 
 import com.intelligence.edge.config.CarConfig;
 import com.intelligence.edge.dao.CarBasicDataMapper;
+import com.intelligence.edge.data.CarTempData;
 import com.intelligence.edge.service.CarNetService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -54,7 +55,7 @@ public class CarNetController {
     @RequestMapping("/connect")
     public int connect(@RequestParam("carID") String carID) {
         // 设备无法连通
-        String carIP = carConfig.getCarIP().get(carID);
+        String carIP = CarTempData.carIP.get(carID);
         if (!carServer.ping(carIP)) {
             log.info("设备离线：" + carID);
             return 0;
@@ -71,7 +72,7 @@ public class CarNetController {
     @RequestMapping("/closeConnect")
     public int closeConnect(@RequestParam("carID") String carID) {
         // 设备无法连通
-        String carIP = carConfig.getCarIP().get(carID);
+        String carIP = CarTempData.carIP.get(carID);
         if (!carServer.ping(carIP)) {
             log.info("设备离线：" + carID);
             return -1;
