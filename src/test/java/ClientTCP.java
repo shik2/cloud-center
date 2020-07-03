@@ -8,7 +8,7 @@ import java.net.Socket;
 public class ClientTCP {
     public static void main(String[] args) throws IOException {
         // 1.创建 Socket ( ip , port ) , 确定连接到哪里.
-        Socket socket = new Socket("localhost", 7001);
+        Socket socket = new Socket("175.24.59.243", 7001);
         // 2.通过Scoket,获取输出流对象
         DataOutputStream out = new DataOutputStream(socket.getOutputStream());
         DataInputStream in = new DataInputStream(socket
@@ -20,6 +20,7 @@ public class ClientTCP {
                 System.out.println(accpet);//输出来自服务器的信息
             }
         } catch (IOException e) {
+            e.printStackTrace();
         }finally {
             in.close();
             out.close();
