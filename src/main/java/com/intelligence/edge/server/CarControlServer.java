@@ -62,7 +62,7 @@ public class CarControlServer {
                 DataInputStream in = new DataInputStream(socket.getInputStream());// 读取客户端传过来信息的DataInputStream
                 String regex = "/^id=.*/";
                 while (true) {
-                    String accpet = in.readUTF();// 读取来自客户端的信息
+                    String accpet = in.readLine();// 读取来自客户端的信息
                     log.info("收到信息" + accpet);//输出来自客户端的信息
                     CarTempData.carState.put(carID, 1);//表示设备已经在线
                     break;
@@ -75,40 +75,10 @@ public class CarControlServer {
         }
     }
 
-
-    public void openConnect2() throws IOException {
-        log.info(carID + ":" + port);
-        server = new ServerSocket(port);//创建  ServerSocket类
-        socket = server.accept();// 等待客户连接
-        out = new DataOutputStream(socket.getOutputStream());
-        DataInputStream in = new DataInputStream(socket.getInputStream());// 读取客户端传过来信息的DataInputStream
-        String regex = "/^id=.*/";
-        while (true) {
-            String accpet = in.readUTF();// 读取来自客户端的信息
-            log.info("收到信息" + accpet);//输出来自客户端的信息
-            CarTempData.carState.put(carID, 1);
-            /*if(accpet.matches(regex)){
-                log.info("匹配成功");
-                if (carBasicDataMapper.getConnectState(carID) == 1) {
-                    log.info("已经连接");
-                }else {
-                    CarBasicData param = new CarBasicData();
-                    param.setState(1);
-                    param.setCarID(carID);
-                    carBasicDataMapper.setConnectState(param);
-                    log.info("成功连接");
-                }
-                break;
-            }*/
-            break;
-        }
-
-    }
-
     public void control(String instruction) {
         log.info("发送指令：" + instruction);
         try {
-            out.writeUTF("客户端：" + instruction);//将客户端的信息传递给服务器
+            out.write(instruction.getBytes());//将客户端的信息传递给服务器
         } catch (IOException e) {
             log.info("发送指令失败");
         }
@@ -120,7 +90,6 @@ public class CarControlServer {
             out.close();
             CarTempData.carState.put(carID, 0);
             openConnect();
-            CarTempData.carState.put(carID, 1);
             log.info("------！");
         } catch (IOException e) {
             e.printStackTrace();

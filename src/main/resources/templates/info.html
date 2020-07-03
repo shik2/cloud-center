@@ -30,7 +30,7 @@
             //获得消息事件
             socket.onmessage = function(msg) {
                 var obj = eval('(' + msg.data + ')');
-                console.log(obj.code);
+                console.log(obj);
                 var timeid = 'time'+obj.code
                 var lonid = 'lon'+obj.code
                 var latid = 'lat'+obj.code
