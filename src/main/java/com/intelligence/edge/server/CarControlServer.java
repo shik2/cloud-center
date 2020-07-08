@@ -37,13 +37,12 @@ public class CarControlServer {
     private CarBasicDataMapper carBasicDataMapper;
 
     public void openConnect() throws IOException {
-        log.info(carID + ":" + port);
-        server = new ServerSocket(port);//创建  ServerSocket类
-
-//        in = new DataInputStream(socket.getInputStream());// 读取客户端传过来信息的DataInputStream
+//        log.info(carID + ":" + port);
+        server = new ServerSocket(port);//创建ServerSocket类
 
         socketThread = new Thread(new Task(socket));
         socketThread.start();
+        log.info("开启控制服务端："+carID);
     }
 
     class Task implements Runnable {
@@ -62,8 +61,9 @@ public class CarControlServer {
                 DataInputStream in = new DataInputStream(socket.getInputStream());// 读取客户端传过来信息的DataInputStream
                 String regex = "/^id=.*/";
                 while (true) {
-                    String accpet = in.readLine();// 读取来自客户端的信息
-                    log.info("收到信息" + accpet);//输出来自客户端的信息
+                    String msg = in.readLine();// 读取来自客户端的信息
+                    log.info("收到信息" + msg);
+                    log.info(carID + "可连接");
                     CarTempData.carState.put(carID, 1);//表示设备已经在线
                     break;
                 }

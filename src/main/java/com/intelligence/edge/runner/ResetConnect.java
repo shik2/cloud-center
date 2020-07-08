@@ -29,14 +29,13 @@ public class ResetConnect implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        System.out.println("重置连接");
+        log.info("重置所有设备连接");
         carBasicDataMapper.resetState();
         // 开启所有车的监听服务端
         for (CarBasicData carBasicData : CarTempData.carList) {
             CarControlServer server = new CarControlServer(carBasicData.getCarID(), carConfig.getCarControlPort().get(carBasicData.getCarID()));
             server.openConnect();
             CarTempData.ccsMap.put(server.getCarID(),server);
-            log.info("开启控制服务端："+server.getCarID());
         }
     }
 }

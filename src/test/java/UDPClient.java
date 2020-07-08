@@ -60,7 +60,7 @@ public class UDPClient {
             dsk = new DatagramSocket(port, InetAddress.getByName(host));
             int bufferSize = 4096;
             byte[] buf = new byte[bufferSize];
-            dpk = new DatagramPacket(buf, buf.length,new InetSocketAddress(InetAddress.getByName(host), 9002));
+            dpk = new DatagramPacket(buf, buf.length,new InetSocketAddress(InetAddress.getByName(host), 9001));
             // 选择进行传输的文件
             File fi = new File(filePath + fileName);
             System.out.println("文件长度:" + (int) fi.length());

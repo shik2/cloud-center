@@ -80,10 +80,10 @@ public class CarENVServer {
             byte[] buf = new byte[2048];
             try {
                 DatagramPacket packet = new DatagramPacket(buf, buf.length);
-                log.info("server is on，waiting for client to send data......");
+                log.info(carID+" 环境数据接收端打开：");
                 while (runFlag) {
                     socket.receive(packet);
-                    log.info(carID + " server received data from client：");
+                    log.info(carID + " 收到：");
                     String strReceive =
                             new String(packet.getData(), 0,
                                     packet.getLength()) +
@@ -102,13 +102,13 @@ public class CarENVServer {
                     log.info("解析获得对象：" + ei);
 
                     // 将解析的环境数据对象存入到数据库中
-//                    carENVDataMapper.insertCarENVData(ei);
+                    carENVDataMapper.insertCarENVData(ei);
                     Position pos = new Position(ei.getLongitude(),ei.getLatitude());
                     CarTempData.carPos.put(carID,pos);
 
                     // websockt 推送
-                    String jsonString = JSONObject.toJSONString(ei);
-                    WebSocketServer.sendInfo(jsonString, carID);
+//                    String jsonString = JSONObject.toJSONString(ei);
+//                    WebSocketServer.sendInfo(jsonString, carID);
 
                     //由于dp_receive在接收了数据之后，其内部消息长度值会变为实际接收的消息的字节数，
                     //所以这里要将dp_receive的内部消息长度重新置为1024

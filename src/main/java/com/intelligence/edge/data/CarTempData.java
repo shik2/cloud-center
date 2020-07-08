@@ -9,7 +9,6 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -38,7 +37,7 @@ public class CarTempData {
         carList = carBasicDataMapper.getAllCarBasicData();
 
         for (CarBasicData carBasicData : carList) {
-            Position position = new Position(0d,0d);
+            Position position = new Position(120.35,30.32);
             carPos.put(carBasicData.getCarID(),position);
             carState.put(carBasicData.getCarID(),0);
         }

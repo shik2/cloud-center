@@ -1,6 +1,7 @@
 package com.intelligence.edge.server;
 
 import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
 
 import java.io.*;
 import java.net.DatagramPacket;
@@ -12,6 +13,7 @@ import java.net.SocketException;
  * 功能说明： 负责接收无人车发送的视频文件
  */
 @Data
+@Slf4j(topic = "c.CarVideoServer")
 public class CarVideoServer {
 
     private String carID;
@@ -68,6 +70,7 @@ public class CarVideoServer {
 
             try {
                 DatagramPacket packet = new DatagramPacket(buf, buf.length);
+                log.info(carID+" 视频数据接收端打开：");
                 while (runFlag) {
 
                     // 本次文件传输的信息

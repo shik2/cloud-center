@@ -107,7 +107,7 @@ public class CarNetServiceImpl implements CarNetService {
             CarBasicData param = new CarBasicData();
             param.setState(1);
             param.setCarID(carID);
-            log.info("修改对象" + param);
+//            log.info("修改对象" + param);
             if (carBasicDataMapper.setConnectState(param) == 1) {
                 receiveData(carID);
                 receiveVideo(carID);
@@ -149,7 +149,7 @@ public class CarNetServiceImpl implements CarNetService {
             for (CarENVServer cbs : cenvList) {
                 if (cbs.getCarID().equals(carID)) {
                     useServer = cbs;
-                    System.out.println("使用已有车辆数据连接");
+                    log.info("使用已有车辆数据连接");
                     flag = 1;
                     break;
                 }
@@ -157,7 +157,7 @@ public class CarNetServiceImpl implements CarNetService {
             if (flag == 0) {
                 useServer = new CarENVServer(carID, carConfig.getCarENVPort().get(carID));
                 cenvList.add(useServer);
-                System.out.println("创建新车辆数据连接");
+                log.info("创建新车辆数据连接");
             }
             useServer.start();
         } catch (IOException e) {
@@ -178,7 +178,7 @@ public class CarNetServiceImpl implements CarNetService {
             for (CarVideoServer cvs : cvsList) {
                 if (cvs.getCarID().equals(carID)) {
                     useServer = cvs;
-                    System.out.println("使用已有车辆视频连接");
+                    log.info("使用已有车辆视频连接");
                     flag = 1;
                     break;
                 }
@@ -186,7 +186,7 @@ public class CarNetServiceImpl implements CarNetService {
             if (flag == 0) {
                 useServer = new CarVideoServer(carID, carConfig.getCarVideoPort().get(carID));
                 cvsList.add(useServer);
-                System.out.println("创建新车辆视频连接");
+                log.info("创建新车辆视频连接");
             }
             useServer.load();
         } catch (IOException e) {
@@ -199,7 +199,7 @@ public class CarNetServiceImpl implements CarNetService {
             if (cbs.getCarID().equals(carID)) {
                 cbs.end();
 //                cbsList.remove(cbs);
-                System.out.println("关闭已有车辆数据连接");
+                log.info("关闭已有车辆数据连接");
                 break;
             }
         }
@@ -210,7 +210,7 @@ public class CarNetServiceImpl implements CarNetService {
             if (cvs.getCarID().equals(carID)) {
                 cvs.end();
 //                cbsList.remove(cbs);
-                System.out.println("关闭已有车辆视频连接");
+                log.info("关闭已有车辆视频连接");
                 break;
             }
         }
