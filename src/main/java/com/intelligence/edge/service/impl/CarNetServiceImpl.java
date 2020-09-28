@@ -2,6 +2,7 @@ package com.intelligence.edge.service.impl;
 
 import com.intelligence.edge.config.CarConfig;
 import com.intelligence.edge.dao.CarBasicDataMapper;
+import com.intelligence.edge.data.CarTempData;
 import com.intelligence.edge.pojo.CarBasicData;
 import com.intelligence.edge.server.CarENVServer;
 import com.intelligence.edge.server.CarVideoServer;
@@ -166,7 +167,7 @@ public class CarNetServiceImpl implements CarNetService {
                 }
             }
             if (flag == 0) {
-                useServer = new CarENVServer(carID, carConfig.getCarENVPort().get(carID));
+                useServer = new CarENVServer(carID, CarTempData.carENVPort.get(carID));
                 cenvList.add(useServer);
                 log.info("创建新车辆数据连接");
             }
@@ -195,7 +196,7 @@ public class CarNetServiceImpl implements CarNetService {
                 }
             }
             if (flag == 0) {
-                useServer = new CarVideoServer(carID, carConfig.getCarVideoPort().get(carID));
+                useServer = new CarVideoServer(carID, CarTempData.carVideoPort.get(carID));
                 cvsList.add(useServer);
                 log.info("创建新车辆视频连接");
             }
