@@ -18,15 +18,19 @@
         (`id`,
         `type`,
         `owner`,
-        `ip`,
         `electricity`,
-        `state`)
+        `state`,
+        `c_port`,
+        `e_port`,
+        `v_port`)
         VALUES (#{carID},
         #{type},
         #{owner},
-        #{ip},
         #{electricity},
-        #{state});
+        #{state},
+        #{cPort},
+        #{ePort},
+        #{vPort});
     </insert>
 
     <delete id="deleteCarBasicDataByID" parameterType="String">

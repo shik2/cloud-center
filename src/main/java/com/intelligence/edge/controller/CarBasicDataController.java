@@ -51,8 +51,6 @@ public class CarBasicDataController {
      */
     @PostMapping(value = "insertCar")
     public int insertCarBasicData(@RequestBody CarBasicData car) {
-        car.setElectricity(100);
-        car.setState(0);
         log.info("新增car:"+car);
         if(car.getCarID()==null){
             return 0;

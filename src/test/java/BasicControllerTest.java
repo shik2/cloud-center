@@ -17,8 +17,9 @@ public class BasicControllerTest {
 
     @Test
     public void test(){
-        CarBasicData cbd = new CarBasicData("car3","xy","shik2",10,0);
+     /*   CarBasicData cbd = new CarBasicData("car4","全向","shik2",7004,8004,9004);
         System.out.println(cbd);
-        carBasicDataService.insertCarBasicData(cbd);
+        carBasicDataService.insertCarBasicData(cbd);*/
+        System.out.println("test");
     }
 }

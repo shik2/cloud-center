@@ -4,6 +4,7 @@ import com.intelligence.edge.dao.CarBasicDataMapper;
 import com.intelligence.edge.pojo.CarBasicData;
 import com.intelligence.edge.pojo.Position;
 import com.intelligence.edge.server.CarControlServer;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import sun.security.krb5.Config;
@@ -19,6 +20,7 @@ import java.util.Map;
  * @date 2020/06/29
  **/
 @Component
+@Slf4j(topic = "c.CarTempData")
 public class CarTempData {
     // 位置
     public static Map<String, Position> carPos = new HashMap<>();
@@ -46,6 +48,7 @@ public class CarTempData {
      */
     @PostConstruct
     public void init() {
+        log.info("------读取数据库车辆基本信息------");
         //加载无人车设备,配置端口信息
         carList = carBasicDataMapper.getAllCarBasicData();
         for (CarBasicData car : carList) {
@@ -58,9 +61,9 @@ public class CarTempData {
             param.setState(0);
             param.setCarID(car.getCarID());
             carBasicDataMapper.setConnectState(param);
-            carControlPort.put(car.getCarID(),car.getCPort());
-            carENVPort.put(car.getCarID(),car.getEPort());
-            carVideoPort.put(car.getCarID(),car.getVPort());
+            carControlPort.put(car.getCarID(),car.getcPort());
+            carENVPort.put(car.getCarID(),car.getePort());
+            carVideoPort.put(car.getCarID(),car.getvPort());
         }
     }
 

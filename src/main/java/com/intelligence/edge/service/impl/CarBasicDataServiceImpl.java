@@ -4,14 +4,17 @@ import com.intelligence.edge.dao.CarBasicDataMapper;
 import com.intelligence.edge.data.CarTempData;
 import com.intelligence.edge.pojo.CarBasicData;
 import com.intelligence.edge.pojo.Position;
+import com.intelligence.edge.server.CarControlServer;
 import com.intelligence.edge.service.CarBasicDataService;
 import javafx.geometry.Pos;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@Slf4j(topic = "c.CarBasicDataServiceImpl")
 public class CarBasicDataServiceImpl implements CarBasicDataService {
 
     @Autowired
@@ -53,12 +56,19 @@ public class CarBasicDataServiceImpl implements CarBasicDataService {
     public int insertCarBasicData(CarBasicData carBasicData) {
         int res = 0;
         try {
+            carBasicData.setElectricity(100);
+            carBasicData.setState(0);
             res = carBasicDataMapper.insertCarBasicData(carBasicData);
+            if(res==1){
+                Position position = new Position(0.0, 0.0);
+                CarTempData.carPos.put(carBasicData.getCarID(),position);
+                // 开启新增车辆的监听
+                CarControlServer server = new CarControlServer(carBasicData.getCarID(),carBasicData.getcPort());
+                server.openConnect();
+                // 移动控制服务端存入CarTempData
+                CarTempData.ccsMap.put(server.getCarID(),server);
+            }
         }catch (Exception e){
-        }
-        if(res==1){
-            Position position = new Position(0.0, 0.0);
-            CarTempData.carPos.put(carBasicData.getCarID(),position);
         }
         return res;
     }
@@ -73,10 +83,23 @@ public class CarBasicDataServiceImpl implements CarBasicDataService {
         int res = 0;
         try {
             res = carBasicDataMapper.deleteCarBasicDataByID(carID);
+            // 关掉对应的车子的控制服务端，并删除CarTempData中的相关信息
+            CarTempData.ccsMap.get(carID).close();
+            if(res==1){
+                CarTempData.carPos.remove(carID);
+                synchronized (this){
+                    for (CarBasicData carBasicData : CarTempData.carList) {
+                        if(carBasicData.getCarID().equals(carID))
+                            CarTempData.carList.remove(carBasicData);
+                    }
+                }
+                CarTempData.ccsMap.remove(carID);
+                CarTempData.carState.remove(carID);
+                CarTempData.carControlPort.remove(carID);
+                CarTempData.carENVPort.remove(carID);
+                CarTempData.carVideoPort.remove(carID);
+            }
         }catch (Exception e){
-        }
-        if(res==1){
-            CarTempData.carPos.remove(carID);
         }
         return res;
     }

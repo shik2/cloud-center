@@ -36,10 +36,6 @@ public class CarControlController {
      */
     @RequestMapping("/reset")
     public int reset(@RequestParam("carID") String carID) {
-        /*if(CarTempData.carState.get(carID)==0){
-            log.info("设备离线：" + carID);
-            return 0;
-        }*/
         carControlService.reset(carID);
         log.info("设备控制端口重启成功：" + carID);
         return 1;
