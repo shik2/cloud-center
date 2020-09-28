@@ -3,9 +3,71 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="2457d831-492e-42be-859f-b5c74cdf7396" name="Default Changelist" comment="端口配置移入到数据库，完善新增和删除车辆功能">
+    <list default="true" id="2457d831-492e-42be-859f-b5c74cdf7396" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/Starter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/config/BeanConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/config/CarConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/config/WebSocketConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/controller/CarBasicDataController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/controller/CarControlController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/controller/CarNetController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/controller/WebSocketController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/dao/CarBasicDataMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/dao/CarENVDataMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/data/CarTempData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/pojo/CarBasicData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/pojo/EnvironmentInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/pojo/Position.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/runner/ResetConnect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/server/CarControlClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/server/CarControlServer$Task.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/server/CarControlServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/server/CarENVServer$Task.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/server/CarENVServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/server/CarVideoServer$Task.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/server/CarVideoServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/server/WebSocketServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/service/CarBasicDataService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/service/CarControlService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/service/CarENVDataService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/service/CarNetService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/service/impl/CarBasicDataServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/service/impl/CarControlServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/service/impl/CarNetServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intelligence/edge/utils/SpringUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/CarBasicDataMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/CarENVDataMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/info.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/webSocket.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/BasicControllerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CarNetTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ChatServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ClientTCP.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/SQLTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/UDPClient.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,6 +187,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BasicControllerTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cloud-center" />
       <option name="PACKAGE_NAME" value="" />
@@ -229,7 +304,7 @@
       <workItem from="1601170810579" duration="1214000" />
       <workItem from="1601270632381" duration="257000" />
       <workItem from="1601287071049" duration="3992000" />
-      <workItem from="1601291081250" duration="3880000" />
+      <workItem from="1601291081250" duration="4112000" />
     </task>
     <task id="LOCAL-00001" summary="添加webSocket">
       <created>1593255879692</created>
@@ -308,11 +383,36 @@
       <option name="project" value="LOCAL" />
       <updated>1601294926632</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="端口配置移入到数据库，完善新增和删除车辆功能">
+      <created>1601294986169</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1601294986169</updated>
+    </task>
+    <task id="LOCAL-00013" summary="端口配置移入到数据库，完善新增和删除车辆功能">
+      <created>1601295098433</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1601295098433</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="添加webSocket" />
@@ -345,13 +445,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="708" y="354" width="503" height="343" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1592975910658" />
-    <state x="376" y="0" key="CommitChangelistDialog2" timestamp="1601294960029">
+    <state x="376" y="0" key="CommitChangelistDialog2" timestamp="1601295097408">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1544" y="11" key="CommitChangelistDialog2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1594207700863" />
     <state x="303" y="0" key="CommitChangelistDialog2/0.0.1549.831@0.0.1549.831" timestamp="1601270884836" />
     <state x="376" y="11" key="CommitChangelistDialog2/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1593771287304" />
-    <state x="376" y="0" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601294960029" />
+    <state x="376" y="0" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601295097408" />
     <state x="600" y="155" key="FileChooserDialogImpl" timestamp="1593437622641">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -440,16 +540,16 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="259" y="99" key="SettingsEditor/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1593324418466" />
-    <state x="452" y="188" key="Vcs.Push.Dialog.v2" timestamp="1601294927898">
+    <state x="452" y="188" key="Vcs.Push.Dialog.v2" timestamp="1601295132767">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1468" y="188" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1594207705272" />
     <state x="452" y="188" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1593771311043" />
-    <state x="452" y="188" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601294927898" />
-    <state x="731" y="415" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601294957455">
+    <state x="452" y="188" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601295132767" />
+    <state x="731" y="415" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601295107314">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="731" y="415" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601294957455" />
+    <state x="731" y="415" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601295107314" />
     <state x="2312" y="193" width="1136" height="749" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1599653432145">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
