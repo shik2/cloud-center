@@ -54,7 +54,7 @@ public class CarBasicDataController {
         car.setElectricity(100);
         car.setState(0);
         log.info("新增car:"+car);
-        if(car.getCarID()==null||car.getIp()==null){
+        if(car.getCarID()==null){
             return 0;
         }
         return carBasicDataService.insertCarBasicData(car);

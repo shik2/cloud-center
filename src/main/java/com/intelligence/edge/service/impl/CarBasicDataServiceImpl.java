@@ -17,6 +17,10 @@ public class CarBasicDataServiceImpl implements CarBasicDataService {
     @Autowired
     private CarBasicDataMapper carBasicDataMapper;
 
+    /**
+     * 查询所有智能车信息
+     * @return
+     */
     @Override
     public List<CarBasicData> getAllCarBasicData() {
         List<CarBasicData> carList = carBasicDataMapper.getAllCarBasicData();
@@ -27,6 +31,11 @@ public class CarBasicDataServiceImpl implements CarBasicDataService {
         return carList;
     }
 
+    /**
+     * 查询单辆车信息
+     * @param carID
+     * @return
+     */
     @Override
     public CarBasicData getCarBasicDataByID(String carID) {
         CarBasicData car = carBasicDataMapper.getCarBasicDataByID(carID);
@@ -35,6 +44,11 @@ public class CarBasicDataServiceImpl implements CarBasicDataService {
         return car;
     }
 
+    /**
+     * 新增车辆
+     * @param carBasicData
+     * @return
+     */
     @Override
     public int insertCarBasicData(CarBasicData carBasicData) {
         int res = 0;
@@ -49,7 +63,11 @@ public class CarBasicDataServiceImpl implements CarBasicDataService {
         return res;
     }
 
-
+    /**
+     * 删除车辆
+     * @param carID
+     * @return
+     */
     @Override
     public int deleteCarBasicDataByID(String carID) {
         int res = 0;
@@ -63,6 +81,11 @@ public class CarBasicDataServiceImpl implements CarBasicDataService {
         return res;
     }
 
+    /**
+     * 更新车辆信息
+     * @param carBasicData
+     * @return
+     */
     public int updateCarBasicData(CarBasicData carBasicData) {
         return carBasicDataMapper.updateCarBasicData(carBasicData);
     }

@@ -2,7 +2,6 @@ package com.intelligence.edge.service.impl;
 
 import com.intelligence.edge.config.CarConfig;
 import com.intelligence.edge.data.CarTempData;
-import com.intelligence.edge.server.CarControlClient;
 import com.intelligence.edge.server.CarControlServer;
 import com.intelligence.edge.service.CarControlService;
 import lombok.extern.slf4j.Slf4j;

@@ -4,7 +4,8 @@
 <mapper namespace="com.intelligence.edge.dao.CarBasicDataMapper">
 
     <select id="getAllCarBasicData" resultType="CarBasicData">
-        SELECT *,id carID  from car_basicdata;
+        SELECT *,id carID,c_port cPort,e_port ePort,v_port vPort
+        from car_basicdata;
     </select>
 
     <select id="getCarBasicDataByID" resultType="CarBasicData" parameterType="String">

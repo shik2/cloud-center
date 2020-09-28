@@ -16,21 +16,23 @@ public class CarBasicData {
     private String carID;
     private String type;
     private String owner;
-    private String ip;
     private Integer electricity;
     private Integer state;
     private Double longitude;
     private Double latitude;
 
+    private Integer cPort;
+    private Integer ePort;
+    private Integer vPort;
+
     public CarBasicData() {
     }
 
-    public CarBasicData(@NotNull String carID, String type, String owner, Integer electricity, Integer state, String ip) {
+    public CarBasicData(@NotNull String carID, String type, String owner, Integer electricity, Integer state) {
         this.carID = carID;
         this.type = type;
         this.owner = owner;
         this.electricity = electricity;
         this.state = state;
-        this.ip = ip;
     }
 }

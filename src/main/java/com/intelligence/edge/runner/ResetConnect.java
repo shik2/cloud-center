@@ -21,21 +21,17 @@ import java.util.List;
 @Slf4j(topic = "c.ResetConnect")
 public class ResetConnect implements CommandLineRunner {
 
-    @Autowired
-    private CarBasicDataMapper carBasicDataMapper;
-
-    @Autowired
-    private CarConfig carConfig;
-
     @Override
     public void run(String... args) throws Exception {
         log.info("重置所有设备连接");
-        carBasicDataMapper.resetState();
         // 开启所有车的监听服务端
-        for (CarBasicData carBasicData : CarTempData.carList) {
-            CarControlServer server = new CarControlServer(carBasicData.getCarID(), carConfig.getCarControlPort().get(carBasicData.getCarID()));
+        for (CarBasicData car : CarTempData.carList) {
+            // 新建各车的移动控制服务端，并开启监听
+            CarControlServer server = new CarControlServer(car.getCarID(), CarTempData.carControlPort.get(car.getCarID()));
             server.openConnect();
+            // 移动控制服务端存入CarTempData
             CarTempData.ccsMap.put(server.getCarID(),server);
         }
     }
 }
+

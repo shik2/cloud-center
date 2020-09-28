@@ -29,7 +29,11 @@ public class CarControlController {
     @Autowired
     private CarConfig carConfig;
 
-
+    /**
+     * 重启单台智能车的控制服务端
+     * @param carID
+     * @return
+     */
     @RequestMapping("/reset")
     public int reset(@RequestParam("carID") String carID) {
         /*if(CarTempData.carState.get(carID)==0){
@@ -41,13 +45,15 @@ public class CarControlController {
         return 1;
     }
 
+
+    /**
+     * 向对应智能车发送移动指令
+     * @param carID
+     * @param instruction
+     * @return
+     */
     @RequestMapping("/send")
     public int control(@RequestParam("carID") String carID,@RequestParam("instruction") String instruction) {
-        String carIP = CarTempData.carIP.get(carID);
-        /*if (!carServer.ping(carIP)) {
-            log.info("设备离线：" + carID);
-            return -1;
-        }*/
         if(CarTempData.carState.get(carID)==0){
             log.info("设备离线：" + carID);
             return 0;

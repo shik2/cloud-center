@@ -52,8 +52,7 @@ public class CarENVServer {
 
         runFlag = true;
         socket = new DatagramSocket(port);
-        // 每接收到一个Socket就建立一个新的线程来处理它
-        socketThread = new Thread(new Task(socket));
+        socketThread = new Thread(new Task(socket));     // 每接收到一个Socket就建立一个新的线程处理
         socketThread.start();
     }
 
@@ -76,7 +75,6 @@ public class CarENVServer {
 
         @Override
         public void run() {
-
             byte[] buf = new byte[2048];
             try {
                 DatagramPacket packet = new DatagramPacket(buf, buf.length);
@@ -91,10 +89,8 @@ public class CarENVServer {
                                     packet.getAddress().getHostAddress() +
                                     ":" + packet.getPort();
                     log.info(strReceive);
-
                     String objStr = new String(packet.getData(), 0,
                             packet.getLength());
-
                     // 将收到的对象字符串转成对象实例
                     Gson gson = new Gson();
                     EnvironmentInfo ei = gson.fromJson(objStr, EnvironmentInfo.class);
@@ -107,13 +103,12 @@ public class CarENVServer {
                     CarTempData.carPos.put(carID,pos);
 
                     // websockt 推送
-//                    String jsonString = JSONObject.toJSONString(ei);
-//                    WebSocketServer.sendInfo(jsonString, carID);
+                    String jsonString = JSONObject.toJSONString(ei);
+                    WebSocketServer.sendInfo(jsonString, carID);
 
                     //由于dp_receive在接收了数据之后，其内部消息长度值会变为实际接收的消息的字节数，
                     //所以这里要将dp_receive的内部消息长度重新置为1024
                     packet.setLength(buf.length);
-
                 }
             } catch (SocketException e) {
                 return;

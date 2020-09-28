@@ -7,7 +7,7 @@ import org.springframework.web.socket.server.standard.ServerEndpointExporter;
 /**
  * @author shik2
  * @date 2020/06/27
- * 开启WebSocket支持
+ * 开启WebSocket支持，自动注册使用@ServerEndpoint注解声明的websocket endpoint
  **/
 @Configuration
 public class WebSocketConfig {

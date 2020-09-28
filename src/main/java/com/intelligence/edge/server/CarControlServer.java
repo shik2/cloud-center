@@ -2,7 +2,6 @@ package com.intelligence.edge.server;
 
 import com.intelligence.edge.dao.CarBasicDataMapper;
 import com.intelligence.edge.data.CarTempData;
-import com.intelligence.edge.pojo.CarBasicData;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
-import java.net.DatagramSocket;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -28,7 +26,7 @@ public class CarControlServer {
     private Thread socketThread;
     private DataOutputStream out;
 
-    public CarControlServer(String carID, int port) throws IOException {
+    public CarControlServer(String carID, int port){
         this.carID = carID;
         this.port = port;
     }
@@ -37,7 +35,7 @@ public class CarControlServer {
     private CarBasicDataMapper carBasicDataMapper;
 
     public void openConnect() throws IOException {
-//        log.info(carID + ":" + port);
+        log.info(carID + ":" + port);
         server = new ServerSocket(port);//创建ServerSocket类
 
         socketThread = new Thread(new Task(socket));

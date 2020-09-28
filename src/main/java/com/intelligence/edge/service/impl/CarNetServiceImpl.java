@@ -35,7 +35,7 @@ public class CarNetServiceImpl implements CarNetService {
     private CarBasicDataMapper carBasicDataMapper;
 
     /**
-     * 测试设备连通性
+     * 测试设备连通性，现在用不到了
      *
      * @param host 设备ip地址
      */
@@ -75,6 +75,12 @@ public class CarNetServiceImpl implements CarNetService {
         }
     }
 
+    /**
+     * 匹配当前的操作系统，不同系统有不同的ping命令格式。现在用不到了
+     * @param line
+     * @param osName
+     * @return
+     */
     private static int getCheckResult(String line,String osName) {
         Pattern pattern;
         if(osName.contains("Linux")){
@@ -97,6 +103,11 @@ public class CarNetServiceImpl implements CarNetService {
     List<CarVideoServer> cvsList = new ArrayList<>();
 
 
+    /**
+     * 打开智能车的数据接收端（环境数据、视频数据）
+     * @param carID
+     * @return
+     */
     public int connect(String carID) {
         log.info("开始连接智能车 " + carID);
         // 判断是已经开启
@@ -107,7 +118,7 @@ public class CarNetServiceImpl implements CarNetService {
             CarBasicData param = new CarBasicData();
             param.setState(1);
             param.setCarID(carID);
-//            log.info("修改对象" + param);
+            // 修改连接状态
             if (carBasicDataMapper.setConnectState(param) == 1) {
                 receiveData(carID);
                 receiveVideo(carID);
@@ -198,7 +209,6 @@ public class CarNetServiceImpl implements CarNetService {
         for (CarENVServer cbs : cenvList) {
             if (cbs.getCarID().equals(carID)) {
                 cbs.end();
-//                cbsList.remove(cbs);
                 log.info("关闭已有车辆数据连接");
                 break;
             }
@@ -209,7 +219,6 @@ public class CarNetServiceImpl implements CarNetService {
         for (CarVideoServer cvs : cvsList) {
             if (cvs.getCarID().equals(carID)) {
                 cvs.end();
-//                cbsList.remove(cbs);
                 log.info("关闭已有车辆视频连接");
                 break;
             }
