@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2457d831-492e-42be-859f-b5c74cdf7396" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/controller/CarBasicDataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/controller/CarBasicDataController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/controller/CarControlController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/controller/CarControlController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/data/CarTempData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/data/CarTempData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/pojo/CarBasicData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/pojo/CarBasicData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/runner/ResetConnect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/runner/ResetConnect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/server/CarControlServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/server/CarControlServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/service/impl/CarBasicDataServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/service/impl/CarBasicDataServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/CarBasicDataMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/CarBasicDataMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/BasicControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BasicControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SQLTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SQLTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="2457d831-492e-42be-859f-b5c74cdf7396" name="Default Changelist" comment="端口配置移入到数据库，完善新增和删除车辆功能" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -239,7 +227,7 @@
       <workItem from="1601170810579" duration="1214000" />
       <workItem from="1601270632381" duration="257000" />
       <workItem from="1601287071049" duration="3992000" />
-      <workItem from="1601291081250" duration="3708000" />
+      <workItem from="1601291081250" duration="3815000" />
     </task>
     <task id="LOCAL-00001" summary="添加webSocket">
       <created>1593255879692</created>
@@ -304,7 +292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601270887195</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="端口配置移入到数据库，完善新增和删除车辆功能">
+      <created>1601294831412</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1601294831412</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -319,7 +314,8 @@
     <MESSAGE value="完善控制端口重启" />
     <MESSAGE value="v1" />
     <MESSAGE value="端口配置移入到数据库" />
-    <option name="LAST_COMMIT_MESSAGE" value="端口配置移入到数据库" />
+    <MESSAGE value="端口配置移入到数据库，完善新增和删除车辆功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="端口配置移入到数据库，完善新增和删除车辆功能" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2572" y="303" key="#Notifications" timestamp="1601291159196">
@@ -340,12 +336,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="708" y="354" width="503" height="343" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1592975910658" />
-    <state x="303" y="0" key="CommitChangelistDialog2" timestamp="1601270884836">
-      <screen x="0" y="0" width="1549" height="831" />
+    <state x="376" y="0" key="CommitChangelistDialog2" timestamp="1601294898604">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1544" y="11" key="CommitChangelistDialog2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1594207700863" />
     <state x="303" y="0" key="CommitChangelistDialog2/0.0.1549.831@0.0.1549.831" timestamp="1601270884836" />
     <state x="376" y="11" key="CommitChangelistDialog2/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1593771287304" />
+    <state x="376" y="0" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601294898604" />
     <state x="600" y="155" key="FileChooserDialogImpl" timestamp="1593437622641">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -434,11 +431,12 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="259" y="99" key="SettingsEditor/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1593324418466" />
-    <state x="-1468" y="188" key="Vcs.Push.Dialog.v2" timestamp="1594207705272">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="452" y="188" key="Vcs.Push.Dialog.v2" timestamp="1601294835261">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1468" y="188" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1594207705272" />
     <state x="452" y="188" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1593771311043" />
+    <state x="452" y="188" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601294835261" />
     <state x="2312" y="193" width="1136" height="749" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1599653432145">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
