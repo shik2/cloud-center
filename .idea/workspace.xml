@@ -4,32 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2457d831-492e-42be-859f-b5c74cdf7396" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/cloud-center.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cloud-center.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/Starter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/Starter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/config/CarConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/config/CarConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/config/WebSocketConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/config/WebSocketConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/controller/CarBasicDataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/controller/CarBasicDataController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/controller/CarControlController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/controller/CarControlController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/controller/CarNetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/controller/CarNetController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/data/CarTempData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/data/CarTempData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/pojo/CarBasicData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/pojo/CarBasicData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/runner/ResetConnect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/runner/ResetConnect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/server/CarControlServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/server/CarControlServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/server/CarENVServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/server/CarENVServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/service/impl/CarBasicDataServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/service/impl/CarBasicDataServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/service/impl/CarControlServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/service/impl/CarControlServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/service/impl/CarENVDataServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/service/impl/CarNetServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intelligence/edge/service/impl/CarNetServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/CarBasicDataMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/CarBasicDataMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/BasicControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BasicControllerTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="2457d831-492e-42be-859f-b5c74cdf7396" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -243,6 +218,7 @@
       <workItem from="1601123954110" duration="253000" />
       <workItem from="1601124372113" duration="4341000" />
       <workItem from="1601170810579" duration="1214000" />
+      <workItem from="1601270632381" duration="257000" />
     </task>
     <task id="LOCAL-00001" summary="添加webSocket">
       <created>1593255879692</created>
@@ -300,7 +276,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594207702498</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="端口配置移入到数据库">
+      <created>1601270887195</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1601270887195</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -314,7 +297,8 @@
     <MESSAGE value="修复了Linux连通性测试失效BUG" />
     <MESSAGE value="完善控制端口重启" />
     <MESSAGE value="v1" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1" />
+    <MESSAGE value="端口配置移入到数据库" />
+    <option name="LAST_COMMIT_MESSAGE" value="端口配置移入到数据库" />
   </component>
   <component name="WindowStateProjectService">
     <state x="721" y="162" key="#com.intellij.ide.util.MemberChooser" timestamp="1593686580615">
@@ -325,10 +309,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="708" y="354" width="503" height="343" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1592975910658" />
-    <state x="-1544" y="11" key="CommitChangelistDialog2" timestamp="1594207700863">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="303" y="0" key="CommitChangelistDialog2" timestamp="1601270884836">
+      <screen x="0" y="0" width="1549" height="831" />
     </state>
     <state x="-1544" y="11" key="CommitChangelistDialog2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1594207700863" />
+    <state x="303" y="0" key="CommitChangelistDialog2/0.0.1549.831@0.0.1549.831" timestamp="1601270884836" />
     <state x="376" y="11" key="CommitChangelistDialog2/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1593771287304" />
     <state x="600" y="155" key="FileChooserDialogImpl" timestamp="1593437622641">
       <screen x="0" y="0" width="1920" height="1040" />
