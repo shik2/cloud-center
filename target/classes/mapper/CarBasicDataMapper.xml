@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.intelligence.edge.dao.CarBasicDataMapper">
+
+    <select id="getAllCarBasicData" resultType="CarBasicData">
+        SELECT *,id carID,c_port cPort,e_port ePort,v_port vPort
+        from car_basicdata;
+    </select>
+
+    <select id="getCarBasicDataByID" resultType="CarBasicData" parameterType="String">
+        SELECT * from car_basicdata WHERE id=#{carID};
+    </select>
+
+    <insert id="insertCarBasicData" parameterType="CarBasicData" useGeneratedKeys="true"
+            keyProperty="id">
+        INSERT INTO car_basicdata
+        (`id`,
+        `type`,
+        `owner`,
+        `electricity`,
+        `state`,
+        `c_port`,
+        `e_port`,
+        `v_port`)
+        VALUES (#{carID},
+        #{type},
+        #{owner},
+        #{electricity},
+        #{state},
+        #{cPort},
+        #{ePort},
+        #{vPort});
+    </insert>
+
+    <delete id="deleteCarBasicDataByID" parameterType="String">
+        DELETE FROM car_basicdata WHERE id=#{carID}
+    </delete>
+
+    <update id="updateCarBasicData" parameterType="CarBasicData">
+        update car_basicdata
+            set
+            type = #{type},
+            owner = #{owner}
+        where id = #{carID}
+    </update>
+
+    <select id="getConnectState" resultType="int" parameterType="String">
+        SELECT state from car_basicdata WHERE id=#{carID};
+    </select>
+
+    <update id="setConnectState" parameterType="CarBasicData">
+        update car_basicdata
+            set
+            state = #{state}
+        where id = #{carID}
+    </update>
+
+    <update id="resetState" parameterType="CarBasicData">
+        update car_basicdata
+            set
+            state = 0
+    </update>
+
+</mapper>
