@@ -79,17 +79,8 @@ public class CarControlServer {
         try {
             out.write(instruction.getBytes());//将客户端的信息传递给服务器
         } catch (IOException e) {
-            log.info("发送指令失败");
-            try{
-                server.close();
-                CarTempData.carState.put(carID, 0);
-                openConnect();
-                log.info("重置"+carID+"-"+port+"控制服务端");
-            }catch (IOException ex) {
-                ex.printStackTrace();
-                log.info("关闭异常！");
-            }
-
+            log.info("发送指令失败,需要重新连接设备");
+            reset();
         }
     }
 
